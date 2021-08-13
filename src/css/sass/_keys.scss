@@ -1,0 +1,109 @@
+.keys-container {
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "ac ac ac divide"
+        "seven eight nine multi"
+        "four five six sub"
+        "one two three add"
+        "zero zero zero equal";
+}
+
+.key {
+    font-family: inherit;
+    font-size: 3rem;
+    border: 1px solid $border;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+
+
+
+    &:not(.key--operation):hover {
+        background-color: $number-key-on-hover;
+    }
+
+
+    &--ac {
+        grid-area: ac;
+        background-color: $ac-btn-color;
+    }
+
+    &--divide {
+        grid-area: divide;
+    }
+
+    &--7 {
+        grid-area: seven;
+    }
+
+    &--8 {
+        grid-area: eight;
+    }
+
+    &--9 {
+        grid-area: nine;
+    }
+
+    &--multi {
+        grid-area: multi;
+    }
+
+    &--4 {
+        grid-area: four;
+    }
+
+    &--5 {
+        grid-area: five;
+    }
+
+    &--6 {
+        grid-area: six;
+    }
+
+    &--subtraction {
+        grid-area: sub;
+    }
+
+    &--1 {
+        grid-area: one;
+    }
+
+    &--2 {
+        grid-area: two;
+    }
+
+    &--3 {
+        grid-area: three;
+    }
+
+    &--addition {
+        grid-area: add;
+    }
+
+    &--0 {
+        grid-area: zero;
+    }
+
+    &--equal {
+        grid-area: equal;
+
+        &:hover {
+            background-color: $dark;
+            color: $operation-keys;
+        }
+    }
+
+    &--operation {
+        background-color: $operation-keys;
+    }
+
+    &[data-op] {
+
+        &:hover {
+            background-color: $dark;
+            color: $operation-keys;
+        }
+    }
+}

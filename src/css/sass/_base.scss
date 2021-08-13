@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    height: 100vh;
+    font-family: cursive;
+    background: #56B9EF;
+    background: -webkit-linear-gradient(top left, #56B9EF, #E48DBE);
+    background: -moz-linear-gradient(top left, #56B9EF, #E48DBE);
+    background: linear-gradient(to bottom right, #56B9EF, #E48DBE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mega-container {
+    width: 400px;
+    box-shadow: 3px 3px 8px $shadow-color;
+}
+
+::placeholder {
+    color: $white;
+}
